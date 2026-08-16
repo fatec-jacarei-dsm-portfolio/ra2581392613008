@@ -7,48 +7,73 @@
 </head>
 <body>
     <div class="header">
-        <span>
+        <span class="links">
             <span>PROJETOS</span>
             <span>CURSOS E CERTIFICADOS</span>
             <span>SOBRE</span>
         </span>
-        <span>
-            <span>PT-BR</span>
-            <span>EN</span>
+        <span class="languages" id="languages">
+            <a class="link pressed" id="pt-br-button">PT-BR</a>
+            <span> - </span>
+            <a id="en-button">EN</a>
         </span>
     </div>
+    <div class="profile-image"></div>
     <h1>Júlia Rodrigues</h1>
     <h4>Desenvolvedora Full Stack</h4>
-    <button>Ver currículo</button>
+    <a class="social-link">LinkedIn</a>
+    <a class="social-link">GitHub</a>
+
+    <h2 class="section-title">Projetos</h2>
     <div>
-        <h2>Projetos</h2>
-        <div class="project-card">
-            <h5>Projeto 1</h5>
-            <p>Descrição</p>
+        <div class="project-row">
+            <div class="project-card">
+                <h4>Sprint Master</h4>
+                <p>Projeto de ABP (Aprendizado Baseado em Projetos) no 1° semestre da Fatec. Atuei como Product Owner e no backend.</p>
+            </div>
+            <div class="project-card">
+                <h5>Projeto 2</h5>
+                <p>Descrição</p>
+            </div>
+            <div class="project-card">
+                <h5>Projeto 3</h5>
+                <p>Descrição</p>
+            </div>
         </div>
-        <div class="project-card">
-            <h5>Projeto 2</h5>
-            <p>Descrição</p>
-        </div>
-        <div class="project-card">
-            <h5>Projeto 3</h5>
-            <p>Descrição</p>
+
+        <div class="project-row">
+            <div class="project-card">
+                <h5>Projeto 1</h5>
+                <p>Descrição</p>
+            </div>
+            <div class="project-card">
+                <h5>Projeto 2</h5>
+                <p>Descrição</p>
+            </div>
+            <div class="project-card">
+                <h5>Projeto 3</h5>
+                <p>Descrição</p>
+            </div>
         </div>
     </div>
     <div>
-        <h2>Cursos e Certificados</h2>
-        <div class="project-card">
+        <h2 class="section-title">Cursos e Certificados</h2>
+        <div class="certificate-card">
             <h5>Certificado 1</h5>
             <p>Descrição</p>
         </div>
-        <div class="project-card">
+        <div class="certificate-card">
             <h5>Certificado 2</h5>
             <p>Descrição</p>
         </div>
-        <div class="project-card">
+        <div class="certificate-card">
             <h5>Certificado 3</h5>
             <p>Descrição</p>
         </div>
+
+        <div class="footer"></div>
     </div>
+
+    <script src="index.js"></script>
 </body>
 </html>

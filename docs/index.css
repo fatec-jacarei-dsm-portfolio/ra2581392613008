@@ -1,13 +1,23 @@
 *{
     color: rgb(229, 218, 238);
     box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+:root{
+    --card-bg-color: #211855;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf');
 }
 
 body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(37, 21, 97);
+    background-color: #1e0f2b;
 }
 
 button{
@@ -17,19 +27,75 @@ button{
 .header{
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    margin: 1rem;
+}
+
+.header .links{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.header .languages{
+    position: absolute;
+    cursor: pointer;
+    width: 150px;
+    margin-left: auto;
+    right: 0;
+}
+
+.languages .link{
+    font-weight: 700;
+    color: rgb(171, 171, 196);
+}
+
+.languages .pressed{
+    color: rgb(222, 85, 250);
+    text-decoration: underline;
+}
+
+.profile-image{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: rgb(123, 52, 170);
+    margin-top: 2rem;
+}
+
+.section-title{
+    text-align: center;
+    margin: 2rem;
+    margin-top: 5rem;
 }
 
 .projects{
     display: flex;
 }
 
-.project-card{
-    background-color: aqua;
-    padding: 10px;
-    margin-bottom: 20px;
+.project-row{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
 }
 
-.project-card h5, p{
-    color: black;
+.project-card{
+    width: 350px;
+    height: 250px;
+    background-color: var(--card-bg-color);
+    padding: 10px 25px;
+    margin-bottom: 20px;
+    border-radius: 1rem;
+}
+
+.certificate-card{
+    width: 1200px;
+    height: 100px;
+    background-color: var(--card-bg-color);
+    padding: 0.3rem 2rem;
+    margin-bottom: 20px;
+    border-radius: 1.25rem;
+}
+
+.footer{
+    height: 10rem;
 }
