@@ -5,7 +5,10 @@
 }
 
 :root{
+    --special-text-color: rgb(209, 135, 252);
+    --special-text-color-hover: rgb(197, 67, 236);
     --card-bg-color: #211855;
+    --card-bg-color-hover: #3a2372;
 }
 
 @font-face {
@@ -25,7 +28,11 @@ button{
 }
 
 .header{
+    width: 100%;
+    height: 2rem;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
     margin: 1rem;
 }
@@ -64,31 +71,113 @@ button{
 
 .section-title{
     text-align: center;
+    font-size: 2.4rem;
     margin: 2rem;
     margin-top: 5rem;
 }
 
+
+/* === PROJETOS === */
+
 .projects{
-    display: flex;
+    width: 72rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
 }
 
-.project-row{
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
+.project-tags-list{
+    margin-bottom: 1.4rem;
 }
 
 .project-card{
-    width: 350px;
-    height: 250px;
+    width: 22rem;
+    height: 26rem;
     background-color: var(--card-bg-color);
-    padding: 10px 25px;
-    margin-bottom: 20px;
+    /* padding: 10px 25px; */
+    padding-top: 0;
+    padding-bottom: 1rem;
     border-radius: 1rem;
+    transition: all 0.3s;
+}
+
+.project-card:hover{
+    width: 23rem;
+    /* padding: 1rem; */
+    background-color: var(--card-bg-color-hover);
+}
+
+.project-img{
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.project-text{
+    padding: 0.2rem 1rem;
+}
+
+.project-text h4{
+    margin: 0.6rem 0;
+}
+
+.project-tags{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tag{
+    color: white;
+    background: linear-gradient(to right, rgb(56, 62, 151), rgb(57, 131, 165));
+    border-radius: 0.5rem;
+    padding: 0.2rem 0.6rem;
+    border: none;
+}
+
+.see-more-button{
+    padding: 0.2rem 0.8rem;
+    background-color: #00000000;
+    color: var(--special-text-color);
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.see-more-button:hover{
+    color: var(--special-text-color-hover);
+    font-size: 15px;
+}
+
+.project-links-row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    bottom: 0;
+}
+
+.project-info-dialog[open]{
+    width: 40rem;
+    height: 35rem;
+    padding: 1.6rem;
+    background-color: #1e0f2b;
+    border: 1px solid rgb(158, 221, 250);
+    border-radius: 1rem;
+    transition: all 1s;
+}
+
+.project-info-dialog .cover-image{
+    height: 13rem;
+    border-radius: 0.8rem;
+}
+
+/* === CERTIFICADOS === */
+
+.certificates{
+    width: 70%;
 }
 
 .certificate-card{
-    width: 1200px;
+    width: 100%;
     height: 100px;
     background-color: var(--card-bg-color);
     padding: 0.3rem 2rem;
@@ -98,4 +187,64 @@ button{
 
 .footer{
     height: 10rem;
+}
+
+
+/* === RESPONSIVO === */
+
+@media (max-width: 1200px){
+    .projects{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 780px){
+    .projects{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .certificate{
+        width: 80%;
+    }
+}
+
+@media (max-width: 550px) {
+    .header{
+        flex-direction: column;
+        gap: 0.3rem;
+        height: 5rem;
+        padding-left: 3rem;
+        align-items: baseline;
+    }
+
+    .header .links{
+        flex-direction: column;
+        align-items: left;
+        gap: 0.8rem;
+    }
+
+    .languages{
+        margin-left: 0;
+        right: auto;
+        position: relative;
+    }
+
+    .projects{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .project-row{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .certificate-card{
+        width: 8rem;
+    }
+
+    .certificates{
+        width: 80%;
+    }
 }
