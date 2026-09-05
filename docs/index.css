@@ -2,6 +2,7 @@
     color: rgb(229, 218, 238);
     box-sizing: border-box;
     font-family: 'Roboto';
+    transition: all 0.4s;
 }
 
 :root{
@@ -21,6 +22,7 @@ body{
     flex-direction: column;
     align-items: center;
     background-color: #1e0f2b;
+    overscroll-behavior: contain;
 }
 
 button{
@@ -41,6 +43,17 @@ button{
     display: flex;
     flex-direction: row;
     gap: 2rem;
+    font-weight: 700;
+}
+
+.header .links .section-link{
+    text-decoration: none;
+    transition: all 0.1s;
+}
+
+.header .links .section-link:hover{
+    color: var(--special-text-color);
+    font-size: 1.04rem;
 }
 
 .header .languages{
@@ -67,6 +80,31 @@ button{
     border-radius: 100%;
     background-color: rgb(123, 52, 170);
     margin-top: 2rem;
+    /* box-shadow: 0 0 5rem #741077; */
+}
+
+.profile-name{
+    margin-bottom: 0.4rem;
+}
+
+.role-label{
+    margin-top: 0;
+    color: var(--special-text-color);
+}
+
+.social-link{
+    font-weight: 700;
+}
+
+.intro-text{
+    width: 40rem;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.small-space{
+    height: 2rem;
 }
 
 .section-title{
@@ -91,6 +129,9 @@ button{
 }
 
 .project-card{
+    display: flex;
+    flex-direction: column;
+    position: relative;
     width: 22rem;
     height: 26rem;
     background-color: var(--card-bg-color);
@@ -113,6 +154,10 @@ button{
 }
 
 .project-text{
+    display: flex;
+    position: relative;
+    flex: 1;
+    flex-direction: column;
     padding: 0.2rem 1rem;
 }
 
@@ -122,6 +167,9 @@ button{
 
 .project-tags{
     display: flex;
+    align-items: center;
+    margin-top: auto;
+    bottom: 0;
     gap: 0.5rem;
 }
 
@@ -156,13 +204,35 @@ button{
 }
 
 .project-info-dialog[open]{
-    width: 40rem;
-    height: 35rem;
+    width: 44rem;
+    /* height: 35rem; */
+    max-height: 90%;
     padding: 1.6rem;
     background-color: #1e0f2b;
-    border: 1px solid rgb(158, 221, 250);
+    /* border: 1px solid rgb(158, 221, 250); */
+    border: none;
     border-radius: 1rem;
     transition: all 1s;
+    overscroll-behavior: contain;
+}
+
+.project-info-dialog[open]::backdrop{
+    transition: all 1s;
+    background-color: rgba(20, 25, 51, 0.76);
+}
+
+.project-info-dialog[open] .project-link{
+    color: var(--special-text-color);
+}
+
+.project-dialog-cover{
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.project-dialog-cover h2{
+    margin-top: 0;
 }
 
 .project-info-dialog .cover-image{
@@ -170,19 +240,155 @@ button{
     border-radius: 0.8rem;
 }
 
+.project-screenshots{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.project-screenshots button{
+    width: 1.6rem;
+    height: 2.4rem;
+    border-radius: 0.4rem;
+    border: none;
+}
+
+.project-screenshot{
+    height: 8rem;
+    border-radius: 0.6rem;
+}
+
+#close-dialog-button{
+    background-color: #3a2372;
+    color: white;
+    padding: 0.4rem;
+    border: none;
+    border-radius: 0.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.screenshot-view[open]{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 25rem;
+    padding: 0.5rem;
+    background-color: #1e1731;
+    border: 1px solid rgb(158, 221, 250);
+    border-radius: 0.5rem;
+}
+
+.screenshot-view[open]::backdrop{
+    transition: all 1s;
+    background-color: rgba(17, 20, 39, 0.699);
+}
+
+.screenshot-view[open] img{
+    width: 100%;
+}
+
+/* === FORMAÇÃO ACADÊMICA === */
+.schools{
+    display: flex;
+    gap: 2rem;
+}
+
+.school-card{
+    width: 30rem;
+    background-color: var(--card-bg-color);
+    padding: 1.6rem;
+    border-radius: 1rem;
+    transition: all 0.3s;
+}
+
+.school-card h3{
+    margin-top: 0;
+}
+
+.school-card ul{
+    margin-top: 0.4rem;
+}
+
+.school-card .school-place{
+    color: rgb(18, 182, 204);
+}
+
+.school-card .stack-title{
+    margin: 1rem 0 0 0;
+}
+
+.in-progress-label{
+    margin: 0;
+    margin-bottom: 0.6rem;
+    color: var(--special-text-color)
+}
+
+/* .school-card:hover{
+    width: 23rem;
+    padding: 1.5rem;
+    background-color: var(--card-bg-color-hover);
+} 
+*/
+
+.relation-project-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.relation-project-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3a2372;
+    padding: 0.3rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+}
+
+.relation-project-card p{
+    margin: 0;
+}
+
+.relation-project-card:hover{
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
 /* === CERTIFICADOS === */
 
 .certificates{
-    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
 }
 
 .certificate-card{
-    width: 100%;
+    display: flex;
+    align-items: center;
+    width: 36rem;
     height: 100px;
     background-color: var(--card-bg-color);
-    padding: 0.3rem 2rem;
-    margin-bottom: 20px;
+    padding: 0.3rem 1.6rem;
     border-radius: 1.25rem;
+    gap: 1.5rem;
+}
+
+.certificate-card .a{
+    display: flex;
+    gap: 1rem;
+}
+
+.certificate-card h5{
+    font-size: 1.2rem;
+    margin: 1rem 0 0 0;
+}
+
+.certificate-img{
+    height: 3.5rem;
+    border-radius: 1rem;
 }
 
 .footer{
@@ -194,18 +400,60 @@ button{
 
 @media (max-width: 1200px){
     .projects{
+        width: 80%;
         grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .intro-text{
+        width: 85%;
+    }
+
+    .certificate-card{
+        width: 27rem;
+    }
+}
+
+@media (max-width: 1050px){
+    .schools{
+        flex-direction: column;
+    }
+
+    .certificates{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .certificate-card{
+        width: 35rem;
     }
 }
 
 @media (max-width: 780px){
     .projects{
-        width: 100%;
+        width: 50%;
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .certificate{
-        width: 80%;
+    .certificates{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .certificate-card{
+        width: 33.2rem;
+    }
+
+    .schools{
+        flex-direction: column;
+    }
+
+    .project-dialog-cover{
+        flex-direction: column;
+    }
+
+    .project-dialog-cover .cover-image{
+        height: 14rem;
+        width: fit-content;
     }
 }
 
@@ -231,7 +479,7 @@ button{
     }
 
     .projects{
-        width: 100%;
+        justify-self: center;
         grid-template-columns: repeat(1, 1fr);
     }
 
@@ -241,10 +489,6 @@ button{
     }
 
     .certificate-card{
-        width: 8rem;
-    }
-
-    .certificates{
-        width: 80%;
+        width: 30rem;
     }
 }

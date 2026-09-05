@@ -8,21 +8,29 @@
   <body>
     <div class="header">
       <span class="links">
-        <a href="#projects">PROJETOS</a>
-        <a href="#certificates">CURSOS E CERTIFICADOS</a>
-        <a href="#">CONTATO</a>
+        <a class="section-link" href="#projects">PROJETOS</a>
+        <a class="section-link" href="#school">FORMAÇÃO ACADÊMICA</a>
+        <a class="section-link" href="#certificates">CURSOS E CERTIFICADOS</a>
       </span>
-      <div class="languages" id="languages">
+      <!-- <div class="languages" id="languages">
         <a class="link pressed" id="pt-br-button">PT-BR</a>
         <span> - </span>
         <a id="en-button">EN</a>
-      </div>
+      </div> -->
     </div>
-    <div class="profile-image"></div>
-    <h1>Júlia Rodrigues</h1>
-    <h4>Desenvolvedora Full Stack</h4>
-    <a class="social-link">LinkedIn</a>
-    <a class="social-link">GitHub</a>
+    <img class="profile-image" src="images/profile-photo-1-1.jpg">
+    <h1 class="profile-name">Júlia Rodrigues</h1>
+    <h4 class="role-label">Desenvolvedora Full Stack</h4>
+    <div class="social-links-row">
+      <a class="social-link" href="https://www.linkedin.com/in/juliarodrigues3141/">LinkedIn</a>
+      <a class="social-link" href="https://github.com/HeyLavenderBee">GitHub</a>
+    </div>
+
+    <!-- PEQUENA INTRODUÇÃO -->
+    <div class="small-space"></div>
+    <p class="intro-text">Olá, mundo!</p>
+    <p class="intro-text">Eu comecei minha jornada na área de tecnologia aos 10 anos, com um programa de turtle com Python para desenhar espirais.<br>
+    Desde então, já conclui um técnico em Desenvolvimento de Sistemas e, hoje em dia, faço faculdade e meu sonho é trabalhar na área!</p>
 
     <!-- PROJETOS -->
     <h2 class="section-title" id="projects">Projetos</h2>
@@ -31,99 +39,94 @@
       <button>Acadêmicos</button>
       <button>Pessoais</button>
     </div>
-    <div class="projects" id="projects-section">
-      <!-- <div class="project-card">
-        <img class="project-img" src="images/narvana.png" />
-        <div class="project-text">
-          <h4>Sprint Master</h4>
-          <p>
-            Projeto de ABP (Aprendizado Baseado em Projetos) do 1° semestre da
-            Fatec.
-          </p>
-          <div class="project-links-row">
-            <span class="project-tags">
-                <button>ABP</button><button>Faculdade</button> 
-            </span>
-            <a>Ver mais</a>
-          </div>
-        </div>
-      </div>
-      <div class="project-card">
-        <img class="project-img" src="images/narvana.png" />
-        <div class="project-text">
-          <h4>Narvana</h4>
-          <button>Jogo</button>
-          <p>Projeto de jogo como TCC.</p>
-          <a>Ver mais</a>
-        </div>
-      </div>
-      <div class="project-card">
-        <img class="project-img" src="images/narvana.png" />
-        <div class="project-text">
-          <h4>Sprint Master</h4>
-          <p>
-            Projeto de ABP (Aprendizado Baseado em Projetos) do 1° semestre da
-            Fatec.
-          </p>
-          <a>Ver mais</a>
-        </div>
-      </div>
-      <div class="project-card">
-        <img class="project-img" src="images/narvana.png" />
-        <div class="project-text">
-          <h4>Sprint Master</h4>
-          <button>ABP</button>
-          <p>
-            Projeto de ABP (Aprendizado Baseado em Projetos) do 1° semestre da
-            Fatec.
-          </p>
-          <a>Ler mais</a>
-        </div>
-      </div>
-      <div class="project-card">
-        <img class="project-img" src="images/narvana.png" />
-        <div class="project-text">
-          <h4>Narvana</h4>
-          <button>Jogo</button>
-          <p>Projeto de jogo como TCC.</p>
-          <a>Ver mais</a>
-        </div>
-      </div>
-      <div class="project-card">
-        <img class="project-img" src="images/narvana.png" />
-        <div class="project-text">
-          <h4>Sprint Master</h4>
-          <p>
-            Projeto de ABP (Aprendizado Baseado em Projetos) do 1° semestre da
-            Fatec.
-          </p>
-          <a>Ver mais</a>
-        </div>
-      </div> -->
-    </div>
+    <div class="projects" id="projects-section"></div>
 
-    <dialog id="project-info-dialog" class="project-info-dialog">
-        Título do projeto
-        <button id="close-dialog-button">Fechar</button>
-    </dialog>
+    <dialog id="project-info-dialog" class="project-info-dialog"></dialog>
 
     <!-- FORMAÇÃO ACADÊMICA -->
     <h2 class="section-title" id="school">Formação acadêmica</h2>
+    <div class="schools">
+      <div class="school-card">
+        <p class="in-progress-label">Em andamento</p>
+        <h3>Tecnólogo em Desenvolvimento de Software Multiplataforma</h3>
+        <p class="school-place">FATEC Prof. Francisco de Moura</p>
+        02/2026 - 12/2028<br><br>
+        <h4 class="stack-title">Principais aprendizados</h4>
+        <ul>
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>Metodologia Scrum</li>
+          <li>PostgreSQL</li>
+          <li>UML</li>
+        </ul>
+        <h4>Projetos relacionados</h4>
+        <div class="relation-project-container">
+          <div class="relation-project-card">Sprint Master</div>
+        </div>
+      </div>
+
+      <div class="school-card">
+        <h3>Ténico em Desenvolvimento de Sistemas integrado ao Ensino Médio</h3>
+        <p class="school-place">ETEC Ilza Nascimento Pintus</p>
+        02/2023 - 12/2025<br><br>
+        <h4 class="stack-title">O que aprendi</h4>
+        <ul>
+          <li>Python</li>
+          <li>Java</li>
+          <li>MySQL</li>
+          <li>PHP</li>
+        </ul>
+        <h4>Projetos relacionados</h4>
+        <div class="relation-project-container">
+          <div class="relation-project-card">
+            <p>Narvana</p>
+            <button class="see-more-button">Ver detalhes</button>
+          </div>
+          <div class="relation-project-card">
+            <p>Crud Mundo</p>
+            <button class="see-more-button" id="">Ver detalhes</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- CERTIFICADOS -->
     <h2 class="section-title" id="certificates">Cursos e Certificados</h2>
     <div class="certificates">
       <div class="certificate-card">
-        <h5>Certificado 1</h5>
-        <p>Descrição</p>
+        <img class="certificate-img" src="images/dio-logo.png">
+        <div class="a">
+          <h5>Bradesco - Java Cloud Native | DIO</h5>
+          <p>Java, Banco de dados, Computação em Nuvem, Azure</p>
+        </div>
       </div>
       <div class="certificate-card">
-        <h5>Certificado 2</h5>
-        <p>Descrição</p>
+        <img class="certificate-img" src="images/tic-em-trilhas.png">
+        <div class="a">
+          <h5>Introdução a Cloud | TIC em trilhas</h5>
+          <p>Computação em nuvem e DevOps</p>
+        </div>
       </div>
       <div class="certificate-card">
-        <h5>Certificado 3</h5>
-        <p>Descrição</p>
+        <img class="certificate-img" src="images/dio-logo.png">
+        <div class="a">
+          <h5>EF SET English Certificate C1 Advanced | EF SET</h5>
+          <p>Inglês avançado na fala, leitura e escrita.</p>
+        </div>
+      </div>
+      <div class="certificate-card">
+        <img class="certificate-img" src="images/dio-logo.png">
+        <div class="a">
+          <h5>IT Essencials | Cisco</h5>
+          <p>Solução de problemas técnicos, Linux, Redes de Computadores.</p>
+        </div>
+      </div>
+      <div class="certificate-card">
+        <img class="certificate-img" src="images/dio-logo.png">
+        <div class="a">
+          <h5>Microsoft Excel 2016 - Intermediário | Fundação Bradesco</h5>
+          <p>Microsoft Excel: tabelas, gráficos e funções.</p>
+        </div>
       </div>
 
       <div class="footer"></div>
