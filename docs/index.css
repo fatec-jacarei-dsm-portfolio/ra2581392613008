@@ -92,8 +92,17 @@ button{
     color: var(--special-text-color);
 }
 
+.social-links-row{
+    margin-bottom: 3rem;
+}
+
 .social-link{
     font-weight: 700;
+}
+
+.image-row{
+    display: flex;
+    gap: 2rem;
 }
 
 .intro-text{
@@ -128,12 +137,37 @@ button{
     margin-bottom: 1.4rem;
 }
 
+.project-tags-list button{
+    background-color: var(--special-text-color);
+    border: none;
+    padding: 0.4rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.project-tags-list .selected{
+    background-color: rgb(64, 182, 218);
+}
+
+.project-tags-list button:hover{
+    background-color: var(--special-text-color-hover);
+}
+
+.project-tags-list .left{
+    border-radius: 0.6rem 0 0 0.6rem;
+}
+
+.project-tags-list .right{
+    border-radius: 0 0.6rem 0.6rem 0;
+}
+
 .project-card{
     display: flex;
     flex-direction: column;
     position: relative;
     width: 22rem;
-    height: 26rem;
+    height: 26.5rem;
     background-color: var(--card-bg-color);
     /* padding: 10px 25px; */
     padding-top: 0;
@@ -163,6 +197,7 @@ button{
 
 .project-text h4{
     margin: 0.6rem 0;
+    margin-bottom: 0.1rem;
 }
 
 .project-tags{
@@ -272,8 +307,8 @@ button{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    height: 25rem;
+    width: 40rem;
+    height: 26rem;
     padding: 0.5rem;
     background-color: #1e1731;
     border: 1px solid rgb(158, 221, 250);
@@ -287,6 +322,7 @@ button{
 
 .screenshot-view[open] img{
     width: 100%;
+    border-radius: 0.3rem;
 }
 
 /* === FORMAÇÃO ACADÊMICA === */
@@ -388,7 +424,6 @@ button{
 
 .certificate-img{
     height: 3.5rem;
-    border-radius: 1rem;
 }
 
 .footer{

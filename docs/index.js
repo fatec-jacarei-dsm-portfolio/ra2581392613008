@@ -19,12 +19,12 @@ var projects = [
         <br>Participei como Product Owner e desenvolvedora front e backend.<br>
     `,
     links: {github: "https://github.com/TechFellasAbp/sprint-master"},
-    date: "06/2026",
+    date: "jun/2026",
   },
   {
     name: "Narvana",
     img: "images/narvana.png",
-    description: "Projeto de jogo como TCC.",
+    description: "Projeto de jogo 3D como TCC.",
     longDescription: `Projeto de jogo para TCC do curso técnico em Desenvolvimento de Sistemas. <br>
         Stack: <ul><li>Godot</li><li>GDScript</li><li>BeepBox</li><li>Clip Studio Paint</li><li>Obsidian</li></ul>
         <br>Participei como Product Owner, Scrum Master, game designer, desenvolvedora de mecânicas, programadora, música, artista 2D e 3D.<br>
@@ -32,7 +32,7 @@ var projects = [
     addScreenshots: ["images/narvana-screenshot.png"],
     links: {github: "https://github.com/HeyLavenderBee/Narvana", deploy: "https://pirarucu-games.itch.io/narvana"},
     tags: ["Acadêmico", "TCC", "Jogo"],
-    date: "12/2025",
+    date: "dez/2025",
   },
   {
     name: "Crud Mundo",
@@ -47,7 +47,19 @@ var projects = [
     `,
     addScreenshots: ["images/crud-mundo-screenshot1.png","images/crud-mundo-screenshot1.png"],
     tags: ["Acadêmico", "Web", "Mobile"],
-    date: "11/2025",
+    date: "nov/2025",
+  },
+  {
+    name: "PikPik Likes TV!",
+    img: "images/pikpik-cover.png",
+    description: "Jogo para competição global desenvolvido em 4 dias.",
+    longDescription: `Projeto de jogo para TCC do curso técnico em Desenvolvimento de Sistemas. Stack: Godot, GDScript, BeepBox, Clip Studio Paint, Obsidian.
+        <br>Desenvolvi todas as partes e aspectos do jogo, como a arte, programação, música, efeitos sonoros, etc.<br>
+    `,
+    links: {deploy: "https://sharkhivestudios.itch.io/pikpik-likes-tv"},
+    addScreenshots: ["images/pikpik-screenshot1.png","images/pikpik-screenshot2.png"],
+    tags: ["Pessoal", "Competição", "Jogo"],
+    date: "ago/2026",
   },
   {
     name: "Santa Duck",
@@ -59,7 +71,7 @@ var projects = [
     links: {deploy: "https://heylavenderbee.itch.io/santa-duck"},
     addScreenshots: ["images/santa-duck-screenshot1.png","images/santa-duck-screenshot2.png"],
     tags: ["Pessoal", "Competição", "Jogo"],
-    date: "12/2024",
+    date: "dez/2024",
   },
 ];
 
@@ -103,13 +115,13 @@ function openProjectDialog(index) {
   if(projects[index].addScreenshots){
     screenshots += `<h3>Fotos adicionais</h3>`;
     screenshots += `<div class="project-screenshots">`;
-    screenshots += `<button> < </button>`;
+    // screenshots += `<button> < </button>`;
     let i = 0;
     for (let img of projects[index].addScreenshots){
       screenshots += `<a id="screenshot${index}" onClick="openScreenshotViewDialog(${index}, ${i})"><img class="project-screenshot" src="${img}"></a>`;
       i++;
     }
-    screenshots += `<button> > </button>`;
+    // screenshots += `<button> > </button>`;
     screenshots += `</div>`;
   }
 
@@ -148,7 +160,7 @@ function closeProjectDialog() {
 function openScreenshotViewDialog(projectIndex, imgIndex) {
   console.log(imgIndex);
   document.getElementById("screenshot-view").innerHTML = `
-    <button onclick="closeScreenshotViewDialog()">Fechar</button>
+    <button id="close-dialog-button" onclick="closeScreenshotViewDialog()">Fechar</button>
     <img src="${projects[projectIndex].addScreenshots[imgIndex]}">
   `;
   document.getElementById("screenshot-view").showModal();
